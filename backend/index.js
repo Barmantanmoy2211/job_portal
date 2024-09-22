@@ -24,7 +24,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 //api routes
 app.use("/api/v1/user", userRoute);
@@ -37,5 +37,5 @@ app.use("/api/v1/application", applicationRoute);
 
 app.listen(PORT, () => {
     connectdb();
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on ${PORT}`);
 })
